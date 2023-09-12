@@ -1,0 +1,22 @@
+{
+  "name": "pharma-mgmt-sys-backend",
+  "version": "1.0.0",
+  "description": "Pharmacy Management System - Backend for BITS Pilani WILP Capstone Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FSE-026-Swapnil/Pharma-Mgmt-Sys-BackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FSE-026-Swapnil/Pharma-Mgmt-Sys-BackEnd/issues"
+  },
+  "homepage": "https://github.com/FSE-026-Swapnil/Pharma-Mgmt-Sys-BackEnd#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
