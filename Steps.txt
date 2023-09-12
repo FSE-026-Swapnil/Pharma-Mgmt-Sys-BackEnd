@@ -1,0 +1,11 @@
+STEPS :-
+
+1> 1st get local mongo db database running. Refer: MONGO_DB_INSTALLATION_SETUP.txt
+
+2> Open command Prompt
+
+3> (In command prompt)
+
+npm i
+
+npx nodemon server.js
