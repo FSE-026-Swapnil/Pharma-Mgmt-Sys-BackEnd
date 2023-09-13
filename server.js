@@ -4,6 +4,8 @@ const cors = require("cors");
 const User = require("./models/users");
 const alert = require('alert');
 const productRoute = require("./router/product");
+const storeRoute = require("./router/store");
+
 
 const app = express();
 const PORT = 4000;
@@ -11,9 +13,11 @@ main();
 app.use(express.json());
 app.use(cors());
 
-//Product's API
+// Product API
 app.use("/api/product", productRoute);
 
+// Store API
+app.use("/api/store", storeRoute);
 // ------------- Signin --------------
 let userAuthCheck;
 app.post("/api/login", async (req, res) => {
