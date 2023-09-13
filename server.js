@@ -3,12 +3,17 @@ const { main } = require("./models/index");
 const cors = require("cors");
 const User = require("./models/users");
 const alert = require('alert');
+const productRoute = require("./router/product");
 
 const app = express();
 const PORT = 4000;
 main();
 app.use(express.json());
 app.use(cors());
+
+//Product's API
+app.use("/api/product", productRoute);
+
 // ------------- Signin --------------
 let userAuthCheck;
 app.post("/api/login", async (req, res) => {
@@ -23,6 +28,7 @@ app.post("/api/login", async (req, res) => {
     if (user) {
       res.send(user);
       userAuthCheck = user;
+      alert("Login Successfull");
     } else {
       res.status(401).send("Invalid Credentials");
       userAuthCheck = null;
