@@ -5,7 +5,8 @@ const User = require("./models/users");
 const alert = require('alert');
 const productRoute = require("./router/product");
 const storeRoute = require("./router/store");
-
+const purchaseRoute = require("./router/purchase");
+const salesRoute = require("./router/sales");
 
 const app = express();
 const PORT = 4000;
@@ -18,6 +19,13 @@ app.use("/api/product", productRoute);
 
 // Store API
 app.use("/api/store", storeRoute);
+
+// Purchase API
+app.use("/api/purchase", purchaseRoute);
+
+// Sales API
+app.use("/api/sales", salesRoute);
+
 // ------------- Signin --------------
 let userAuthCheck;
 app.post("/api/login", async (req, res) => {
